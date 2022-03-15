@@ -60,3 +60,5 @@ const dureeAleatoireCalcul = () => {
     return dureeAleatoire; /*durée litérale de l'exercice*/
 };
 
+/*Fonction de séléction du nombre de répétitions*/
+
