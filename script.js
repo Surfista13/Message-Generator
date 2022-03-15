@@ -44,7 +44,6 @@ const dureeAleatoireCalcul = () => {
     while (!Number.isInteger(checkDureeAleatoire / 5)) {
     checkDureeAleatoire = Math.floor(Math.random () * (121-30)+30);
     };
-
     if (checkDureeAleatoire > 59) {
         dureeAleatoireMin = Math.floor(checkDureeAleatoire / 60);
         dureeAleatoireSec = (checkDureeAleatoire - (dureeAleatoireMin * 60));
@@ -60,3 +59,4 @@ const dureeAleatoireCalcul = () => {
     };   
     return dureeAleatoire; /*durée litérale de l'exercice*/
 };
+
