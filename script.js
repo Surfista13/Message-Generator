@@ -28,6 +28,35 @@ const exerciceSport2 = {
         ['Extensions des mollets','Repetitions']],
     selectExcercices () {
         const indexArray = Math.max(Math.round((Math.random ()*this.exercices.length-1)),0);
-        return this.exercices[indexArray];
+        return this.exercices[indexArray]; /* array de l'exercice*/
     }
 };
+
+/*Fonction de séléction du durée aléatoire entre 30s et 120s par pallier de 5s*/
+
+const dureeAleatoireCalcul = () => {
+    
+    let checkDureeAleatoire = 1;
+    let dureeAleatoire = "";
+    let dureeAleatoireSec = 1;
+    let dureeAleatoireMin = 1;
+
+    while (!Number.isInteger(checkDureeAleatoire / 5)) {
+    checkDureeAleatoire = Math.floor(Math.random () * (121-30)+30);
+    };
+    if (checkDureeAleatoire > 59) {
+        dureeAleatoireMin = Math.floor(checkDureeAleatoire / 60);
+        dureeAleatoireSec = (checkDureeAleatoire - (dureeAleatoireMin * 60));
+       
+        if (dureeAleatoireSec == 0) {
+            dureeAleatoire = `${dureeAleatoireMin} minutes`;
+        } else {
+        dureeAleatoire = `${dureeAleatoireMin} minutes et ${dureeAleatoireSec} secondes`;
+        }
+    } else {
+        dureeAleatoireSec = checkDureeAleatoire;
+        dureeAleatoire = `${dureeAleatoireSec} secondes`;
+    };   
+    return dureeAleatoire; /*durée litérale de l'exercice*/
+};
+
