@@ -28,7 +28,7 @@ const exerciceSport2 = {
         ['Extensions des mollets','Repetitions']],
     selectExcercices () {
         const indexArray = Math.max(Math.round((Math.random ()*this.exercices.length-1)),0);
-        return this.exercices[indexArray];
+        return this.exercices[indexArray]; /* array de l'exercice*/
     }
 };
 
@@ -58,7 +58,5 @@ const dureeAleatoireCalcul = () => {
         dureeAleatoireSec = checkDureeAleatoire;
         dureeAleatoire = `${dureeAleatoireSec} secondes`;
     };   
-    return dureeAleatoire;
+    return dureeAleatoire; /*durée litérale de l'exercice*/
 };
-
-console.log(dureeAleatoireCalcul ()); 
