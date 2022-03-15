@@ -31,4 +31,3 @@ const exerciceSport2 = {
         return this.exercices[indexArray];
     }
 };
-console.log(exerciceSport2.selectExcercices());
