@@ -27,9 +27,8 @@ const exerciceSport2 = {
         ['Squats bulgares','Repetitions'],
         ['Extensions des mollets','Repetitions']],
     selectExcercices () {
-        const arrayLength = this.exercices.length;
-        const indexArray = Math.max(Math.round((Math.random ()*arrayLength-1)),0);
-        const selectedArrayExercices = this.exercices[indexArray];
-        return selectedArrayExercices;
+        const indexArray = Math.max(Math.round((Math.random ()*this.exercices.length-1)),0);
+        return this.exercices[indexArray];
     }
 };
+console.log(exerciceSport2.selectExcercices());
