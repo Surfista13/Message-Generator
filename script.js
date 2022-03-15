@@ -38,29 +38,26 @@ const dureeAleatoireCalcul = () => {
     
     let checkDureeAleatoire = 1;
     let dureeAleatoire = "";
-    let dureeAleatoireMin = 1;
     let dureeAleatoireSec = 1;
+    let dureeAleatoireMin = 1;
 
     while (!Number.isInteger(checkDureeAleatoire / 5)) {
-    checkDureeAleatoire = Math.floor(Math.random () * (120-30)+30);
+    checkDureeAleatoire = Math.floor(Math.random () * (121-30)+30);
     };
 
     if (checkDureeAleatoire > 59) {
         dureeAleatoireMin = Math.floor(checkDureeAleatoire / 60);
-        dureeAleatoireSec = checkDureeAleatoire - dureeAleatoireMin*60;
-        if (dureeAleatoireSec = 0) {
+        dureeAleatoireSec = (checkDureeAleatoire - (dureeAleatoireMin * 60));
+       
+        if (dureeAleatoireSec == 0) {
             dureeAleatoire = `${dureeAleatoireMin} minutes`;
         } else {
-        dureeAleatoire = `${dureeAleatoireMin} minutes et ${dureeAleatoireSec}secondes`;
-        };
+        dureeAleatoire = `${dureeAleatoireMin} minutes et ${dureeAleatoireSec} secondes`;
+        }
     } else {
-        dureeAleatoire = `${dureeAleatoireSec} minutes`;
+        dureeAleatoireSec = checkDureeAleatoire;
+        dureeAleatoire = `${dureeAleatoireSec} secondes`;
     };   
-    console.log((checkDureeAleatoire / 60));
-    console.log(checkDureeAleatoire);
-    console.log(dureeAleatoireMin);
-    console.log(dureeAleatoireSec);
-    console.log(dureeAleatoire);
     return dureeAleatoire;
 };
 
