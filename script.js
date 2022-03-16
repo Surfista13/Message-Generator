@@ -60,5 +60,10 @@ const dureeAleatoireCalcul = () => {
     return dureeAleatoire; /*durée litérale de l'exercice*/
 };
 
-/*Fonction de séléction du nombre de répétitions*/
+/*Fonction de séléction du nombre de répétitions entre 10 et 30*/
 
+const repetitionAleatoireCalcul = () => {
+
+    let nbRepetition = Math.floor(Math.random () * (31-10)+10);
+    return nbRepetition;
+};
