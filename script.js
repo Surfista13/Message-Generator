@@ -51,7 +51,7 @@ const dureeAleatoireCalcul = () => {
         if (dureeAleatoireSec == 0) {
             dureeAleatoire = `${dureeAleatoireMin} minutes`;
         } else {
-        dureeAleatoire = `${dureeAleatoireMin} minutes et ${dureeAleatoireSec} secondes`;
+        dureeAleatoire = `${dureeAleatoireMin} minutes and ${dureeAleatoireSec} secondes`;
         }
     } else {
         dureeAleatoireSec = checkDureeAleatoire;
@@ -70,10 +70,16 @@ const repetitionAleatoireCalcul = () => {
 
 /*Fonction d'affichage de l'exercice séléctionné aléatoirement et de la durée ou nombre de répétition associé*/
 
-const affichageExcerciceAleatoire = (funcrepetitionAleatoireCalcul) => {
+const affichageExcerciceAleatoire = (funcDureeAleatoireCalcul, funcRepetitionAleatoireCalcul) => {
 
-    return funcrepetitionAleatoireCalcul()
+    let finalMessage;
+    let exercices = exerciceSport2.selectExcercices();
+    if (exercices[1] == "Duree") {
+        finalMessage = `Your trainer has selected the excercice "${exercices[0]}" to do for ${funcDureeAleatoireCalcul()}. Let's go.`
+    } else {
+        finalMessage = `Your trainer has selected the excercice "${exercices[0]}" to do during ${funcRepetitionAleatoireCalcul()} repetitions. Let's go.`
+    };
+    return finalMessage;
 
 };
-console.log(affichageExcerciceAleatoire)
-
+console.log(affichageExcerciceAleatoire(dureeAleatoireCalcul,repetitionAleatoireCalcul));
