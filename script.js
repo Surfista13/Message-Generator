@@ -65,5 +65,8 @@ const dureeAleatoireCalcul = () => {
 const repetitionAleatoireCalcul = () => {
 
     let nbRepetition = Math.floor(Math.random () * (31-10)+10);
-    return nbRepetition;
+    return nbRepetition; /*nombre de répétition séléctionné aléatoirement*/
 };
+
+/*Fonction d'affichage de l'exercice séléctionné aléatoirement et de la durée ou nombre de répétition associé*/
+
