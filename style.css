@@ -1,0 +1,79 @@
+@font-face {
+    font-family: 'Josefin';
+    src: url('./fonts/JosefinSans-VariableFont_wght.ttf') format('truetype');
+}
+
+* {
+    font-size: 16px;
+    font-family: 'Josefin', Arial, Helvetica, sans-serif;
+    color:#2F4F4F;
+    margin: 0;
+    padding: 0;
+
+}
+#FR {  
+    background-color: rgb(241, 238, 228);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+.container {
+    background-color: rgb(168, 154, 141);
+    height: 300px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.imageTitle {
+    width:30%;
+    background-image: url("images/sport\ -\ background.webp");
+    background-size: cover;
+    opacity: 0.5;
+    text-align: end;
+    display: flex;
+    justify-content: center;
+    align-items:flex-end
+}
+
+.imageTitle h2 {
+    font-size: 1.7rem;
+    background-color: black;
+    color: whitesmoke;
+    opacity: 1;
+    padding: 0px 5px 2px 0px;
+    width: 100%;
+    text-align: center;
+}
+
+.messageBox {
+    width: 70%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#bouton {
+    background-color: #dfae44;      
+    border-radius: 10%;
+    width:80px;
+    height:30px;
+    text-align: center;
+}
+
+
+#bouton a {
+    line-height: 30px;
+    text-decoration: none;
+}
+
+#bouton:hover {
+    background-color: #dfae44ad;
+}
+
+
+.message {
+    background-color: beige;
+}
+
+

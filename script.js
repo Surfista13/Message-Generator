@@ -82,4 +82,5 @@ const affichageExcerciceAleatoire = (funcDureeAleatoireCalcul, funcRepetitionAle
     return finalMessage;
 
 };
+
 console.log(affichageExcerciceAleatoire(dureeAleatoireCalcul,repetitionAleatoireCalcul));
