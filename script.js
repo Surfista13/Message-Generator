@@ -70,3 +70,10 @@ const repetitionAleatoireCalcul = () => {
 
 /*Fonction d'affichage de l'exercice séléctionné aléatoirement et de la durée ou nombre de répétition associé*/
 
+const affichageExcerciceAleatoire = (funcrepetitionAleatoireCalcul) => {
+
+    return funcrepetitionAleatoireCalcul()
+
+};
+console.log(affichageExcerciceAleatoire)
+
