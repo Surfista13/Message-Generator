@@ -1,15 +1,15 @@
+/*GENERALE*/
+
 @font-face {
     font-family: 'Josefin';
     src: url('./fonts/JosefinSans-VariableFont_wght.ttf') format('truetype');
 }
-
 * {
     font-size: 16px;
     font-family: 'Josefin', Arial, Helvetica, sans-serif;
     color:#2F4F4F;
     margin: 0;
     padding: 0;
-
 }
 #FR {  
     background-color: rgb(241, 238, 228);
@@ -22,45 +22,58 @@
     background-color: rgb(168, 154, 141);
     height: 300px;
     width: 100%;
+    max-width: 1200px;
     display: flex;
-    justify-content: space-between;
-}
-.imageTitle {
-    width:30%;
-    background-image: url("images/sport\ -\ background.webp");
-    background-size: cover;
-    opacity: 0.5;
-    text-align: end;
-    display: flex;
-    justify-content: center;
-    align-items:flex-end
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    margin: 30px 30px 30px 30px;
 }
 
-.imageTitle h2 {
+/*IMAGE ET TITRE*/
+
+.imageTitle {
+    
+    background-image: url("images/sport\ -\ background.webp");
+    background-size:cover;
+    background-repeat: no-repeat;
+    opacity: 0.5;   
+    display: flex;
+    align-items:flex-end;
+    width: 400px;
+}
+
+.title {
     font-size: 1.7rem;
     background-color: black;
     color: whitesmoke;
-    opacity: 1;
-    padding: 0px 5px 2px 0px;
     width: 100%;
-    text-align: center;
+    text-align: center;     
+    line-height: 50px;
 }
 
-.messageBox {
-    width: 70%;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-}
+/*BOUTON ET MESSAGE*/
 
 #bouton {
     background-color: #dfae44;      
-    border-radius: 10%;
-    width:80px;
-    height:30px;
-    text-align: center;
+    width:100px;
+    height:50px;
+    cursor: pointer; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-transform: uppercase;
 }
 
+.messageBox {
+    
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 800px;
+    width: 100%;
+
+}
 
 #bouton a {
     line-height: 30px;
@@ -69,11 +82,33 @@
 
 #bouton:hover {
     background-color: #dfae44ad;
+    font-weight: bold;
 }
-
 
 .message {
     background-color: beige;
+    height: 50px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding: 0px 5px 0px 5px;
 }
 
+.corpsMessage {
+    width: 100%;
+}
 
+/* MEDIA QUERIES */
+
+@media only screen and (max-width:1265px) {
+
+    .container {
+        justify-content:center;
+        height: 700px;
+        min-width: 490px;
+    }
+    .imageTitle {
+        background-image: url("images/backgroundsport2.jpg");
+       height: 500px;
+    }
+}
