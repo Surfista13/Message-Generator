@@ -68,9 +68,9 @@ const repetitionAleatoireCalcul = () => {
     return nbRepetition; /*nombre de répétition séléctionné aléatoirement*/
 };
 
-/*Fonction d'affichage de l'exercice séléctionné aléatoirement et de la durée ou nombre de répétition associé*/
+/*Fonction construction du message contenant l'exercice séléctionné aléatoirement et de la durée ou nombre de répétition associé*/
 
-const affichageExcerciceAleatoire = (funcDureeAleatoireCalcul, funcRepetitionAleatoireCalcul) => {
+const constructionExcerciceAleatoire = (funcDureeAleatoireCalcul, funcRepetitionAleatoireCalcul) => {
 
     let finalMessage;
     let exercices = exerciceSport2.selectExcercices();
@@ -83,4 +83,13 @@ const affichageExcerciceAleatoire = (funcDureeAleatoireCalcul, funcRepetitionAle
 
 };
 
-console.log(affichageExcerciceAleatoire(dureeAleatoireCalcul,repetitionAleatoireCalcul));
+/*Affichage du message dans le DOM*/
+
+let element = document.querySelector(".corpsMessage");
+let element2 = document.getElementById("bouton");
+
+function showMessage () {
+    let messageCandidate = constructionExcerciceAleatoire(dureeAleatoireCalcul,repetitionAleatoireCalcul);
+    element.innerHTML = messageCandidate;
+}
+element2.onclick = showMessage;
